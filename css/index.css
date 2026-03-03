@@ -9,19 +9,34 @@
     box-sizing: border-box;
 }
 
+/* Estilo Geral */
+
 body {
     background-color: var(--cinza);
+    font-family: Montserrat, sans-serif;
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+
+    .content {
+        background-color: var(--branco);
+        border-radius: 25px;
+        border: 1px solid black;
+    }
 }
 
+
+/*
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-
+    max-width: 90%;
     font-family: Montserrat, sans-serif;
 
     background-color: var(--branco);
@@ -40,13 +55,14 @@ header .header-box {
     gap: 10px;
 
     img {
-        width: 96px;
-        height: 96px;
-        border-radius: 100px;
+        max-width: 96px;
+        max-height: 96px;
+        border-radius: 50%;
     }
-    /* img:hover {
+
+    img:hover {
         transform: scale(1.1);
-    } */
+    }
 
     h1 {
         font-size: 1.6rem;
@@ -70,6 +86,7 @@ main {
         font-size: 42px;
         color: var(--cinza);
     }
+
     i.fa-brands:hover {
         transform: scale(1.2);
     }
@@ -114,47 +131,284 @@ ul.box-actions {
 
 footer {
 
-    width: 100%;
+    max-width: 100%;
 
     a {
         text-decoration: none;
+    }
 
-        div.box-email.contact {
-            background-color: black;
-            color: #fff;
-            padding: 20px;
-            border: 1px solid var(--cinza);
-            border-radius: 20px;
-            width: 100%;
+    div.box-email.contact {
+        background-color: black;
+        color: #fff;
+        padding: 20px;
+        border: 1px solid var(--cinza);
+        border-radius: 20px;
+        width: 100%;
 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+
+        i {
+            font-size: 32px;
+        }
+
+        span {
+            align-self: center;
+        }
+    }
+} */
+
+@media (max-width: 480px) {
+
+    /* caixa principal do conteúdo */
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        margin: 5px 0;
+        max-width: 90%;
+        padding: 15px;
+
+        /* cabeçalho do conteúdo */
+        header .header-box {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             gap: 10px;
 
-            i {
-                font-size: 32px;
+            img {
+                max-width: 96px;
+                max-height: 96px;
+                border-radius: 50%;
             }
 
-            span {
-                align-self: center;
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* seção main com links */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 100%;
+            /* 100% do pai .content*/
+
+            /* Logos de redes sociais */
+            span a i.fa-brands {
+                font-size: 42px;
+                color: var(--cinza);
+            }
+
+            ul.box-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                /* 100% do pai - main*/
+
+                a {
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+                li.box-info-access {
+                    color: var(--cinza);
+                    padding: 20px;
+                    border: 1px solid var(--cinza);
+                    border-radius: 20px;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+
+        }
+
+        /* rodapé do conteúdo principal */
+        footer {
+
+            max-width: 100%;
+
+            a {
+                text-decoration: none;
+            }
+
+            div.box-email.contact {
+                background-color: black;
+                color: #fff;
+                padding: 20px;
+                border: 1px solid var(--cinza);
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 25px;
+
+                max-width: 100%;
+
+                i {
+                    font-size: 32px;
+                }
+
+                span {
+                    text-align: center;
+                }
+
             }
         }
     }
+
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
+/* @media (max-width: 768px) {
+    .header-box {}
+
+}  */
+
+@media (min-width: 481px) {
+
+    /* caixa principal do conteúdo */
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        margin: 5px 0;
+        max-width: 90%;
+        padding: 15px;
+
+        /* cabeçalho do conteúdo */
+        header .header-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                max-width: 96px;
+                max-height: 96px;
+                border-radius: 50%;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* seção main com links */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 100%;
+            /* 100% do pai .content*/
+
+            /* Logos de redes sociais */
+            span a i.fa-brands {
+                font-size: 42px;
+                color: var(--cinza);
+            }
+
+            span a i.fa-brands:hover {
+                transform: scale(1.2);
+            }
+
+            ul.box-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                /* 100% do pai - main*/
+
+                a {
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+
+                a:hover {
+                    font-weight: 500;
+
+                    li.box-info-access {
+                        background-color: var(--cinza);
+                        color: var(--branco);
+
+                    }
+                }
+
+                li.box-info-access {
+                    color: var(--cinza);
+                    padding: 20px;
+                    border: 1px solid var(--cinza);
+                    border-radius: 20px;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+
+        }
+
+        /* rodapé do conteúdo principal */
+        footer {
+
+            max-width: 100%;
+
+            a {
+                text-decoration: none;
+            }
+
+            div.box-email.contact {
+                background-color: black;
+                color: #fff;
+                padding: 20px;
+                border: 1px solid var(--cinza);
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 25px;
+
+                max-width: 100%;
+
+                i {
+                    font-size: 32px;
+                }
+
+                span {
+                    text-align: center;
+                }
+
+            }
+        }
     }
-}
-
-@media (max-width: 768px) {
-    .header-box {}
-
-}
-
-@media (min-width: 1024px) {
-    .header-box {}
-
 }
