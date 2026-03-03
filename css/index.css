@@ -44,9 +44,9 @@ header .header-box {
         height: 96px;
         border-radius: 100px;
     }
-    img:hover {
+    /* img:hover {
         transform: scale(1.1);
-    }
+    } */
 
     h1 {
         font-size: 1.6rem;
