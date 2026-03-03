@@ -1,0 +1,154 @@
+:root {
+    --cinza: #606a6c;
+    --branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cinza);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    font-family: Montserrat, sans-serif;
+
+    background-color: var(--branco);
+    border-radius: 25px;
+
+    border: 1px solid black;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+header .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    img {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        text-align: center;
+
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    i.fa-brands {
+        font-size: 42px;
+        color: var(--cinza);
+    }
+}
+
+ul.box-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+
+        width: 100%;
+
+        li.box-info-access {
+            color: var(--cinza);
+            padding: 20px;
+            border: 1px solid var(--cinza);
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+
+    a:hover {
+        font-weight: 500;
+
+        li.box-info-access {
+            background-color: var(--cinza);
+            color: var(--branco);
+
+        }
+    }
+
+}
+
+footer {
+
+    width: 100%;
+
+    a {
+        text-decoration: none;
+
+        div.box-email.contact {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            border: 1px solid var(--cinza);
+            border-radius: 20px;
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+
+            i {
+                font-size: 32px;
+            }
+
+            span {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-box {}
+
+}
+
+@media (min-width: 1024px) {
+    .header-box {}
+
+}
